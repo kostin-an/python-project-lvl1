@@ -19,7 +19,7 @@ lint:
 selfcheck:
 	poetry check
 
-check: selfcheck test lint
+check: selfcheck lint
 
 build: check
 	poetry build
