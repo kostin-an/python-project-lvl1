@@ -5,4 +5,8 @@
 
 [![Actions Status](https://github.com/kostin-an/python-project-lvl1/workflows/test_lint/badge.svg)](https://github.com/kostin-an/python-project-lvl1/actions)
 
+brain-even
 https://asciinema.org/a/XLJFDhmNvqGQ35xYSHx5avcyD
+
+brain-calc
+https://asciinema.org/a/NlYePwTLKlOVhCAeE7Jrpq0Od
