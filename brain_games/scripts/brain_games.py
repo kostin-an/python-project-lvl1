@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from brain_games.cli import welcome_user
+from brain_games.scripts.brain_even import even_check
 
 
 def greething():
@@ -9,7 +10,8 @@ def greething():
 
 def main():
     greething()
-    welcome_user()
+    name = welcome_user()
+    even_check(name)
 
 
 if __name__ == '__main__':
