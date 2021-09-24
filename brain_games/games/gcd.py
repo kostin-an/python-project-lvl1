@@ -1,18 +1,16 @@
-from brain_games.games.helper import generate_number, get_answer, generate_operation, \
-    get_calc_result, get_check
+from brain_games.games.helper import generate_number, get_answer, get_check, get_gcd_result
 
 
-def calc(name='User'):
-    print('What is the result of the expression?')
+def gcd(name='User'):
+    print('Find the greatest common divisor of given numbers.')
 
     i = 0
     while i < 3:
         number_one = generate_number()
         number_two = generate_number()
-        operation = generate_operation()
-        result = get_calc_result(number_one, number_two, operation)
+        result = get_gcd_result(number_one, number_two)
 
-        print(f'Question: {number_one} {operation} {number_two}')
+        print(f'Question: {number_one} {number_two}')
         answer = get_answer()
         i = get_check(i, answer, result, name)
         if i == 3:
