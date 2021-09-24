@@ -12,7 +12,7 @@ def even_check(name="User"):
         result = get_even_result(number)
         print(f'Question: {number}')
         answer = get_answer().lower()
-        i = get_check(i, answer, result, name)
+        i = get_check(i, answer, result)
         if i == 3:
             print(f'Congratulations, {name}!')
         elif i == 4:

@@ -14,7 +14,7 @@ def calc(name='User'):
 
         print(f'Question: {number_one} {operation} {number_two}')
         answer = get_answer()
-        i = get_check(i, answer, result, name)
+        i = get_check(i, answer, result)
         if i == 3:
             print(f'Congratulations, {name}!')
         elif i == 4:

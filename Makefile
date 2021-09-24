@@ -13,6 +13,9 @@ brain-calc:
 brain-gcd:
 	poetry run brain-gcd
 
+brain-progression:
+	poetry run brain-progression
+
 test:
 	poetry run pytest
 

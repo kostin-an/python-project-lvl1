@@ -16,6 +16,14 @@ def generate_operation():
     return random.choice(operation_list)
 
 
+def generate_progression():
+    start = random.randint(1, 5)
+    step = random.randint(1, 5)
+    stop = step * 10
+    progression_list = list(range(start, stop, step))
+    return progression_list
+
+
 def get_even_result(number):
     if (number % 2) == 0:
         return 'yes'
@@ -37,7 +45,7 @@ def get_gcd_result(number_one, number_two):
     return math.gcd(number_one, number_two)
 
 
-def get_check(i, answer, result, name):
+def get_check(i, answer, result):
     if answer == str(result):
         print('Correct!')
         i += 1
