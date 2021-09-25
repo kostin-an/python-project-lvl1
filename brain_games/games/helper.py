@@ -52,3 +52,13 @@ def get_check(i, answer, result):
     else:
         i = 4
     return i
+
+
+def get_prime_result(number):
+    if number < 2:
+        return 'no'
+    list_number = list(range(1, number))
+    for i in list_number:
+        if (i > 1) and (number % i == 0):
+            return 'no'
+    return 'yes'

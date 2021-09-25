@@ -1,13 +1,13 @@
-from brain_games.games.helper import get_answer, get_check, get_even_result, generate_number
+from brain_games.games.helper import generate_number, get_prime_result, get_answer, get_check
 
 
-def even_check(name="User"):
-    print('Answer "yes" if the number is even, otherwise answer "no".')
+def prime(name="User"):
+    print('Answer "yes" if given number is prime. Otherwise answer "no".')
 
     i = 0
     while i < 3:
         number = generate_number()
-        result = get_even_result(number)
+        result = get_prime_result(number)
         print(f'Question: {number}')
         answer = get_answer().lower()
         i = get_check(i, answer, result)
