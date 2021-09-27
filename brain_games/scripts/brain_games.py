@@ -10,8 +10,7 @@ def greething():
 
 def main():
     greething()
-    name = welcome_user()
-    even_check(name)
+    welcome_user()
 
 
 if __name__ == '__main__':
