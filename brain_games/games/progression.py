@@ -12,7 +12,7 @@ def progression(name="User"):
         index = random.randint(0, len(progression_user) - 1)
         progression_quest = progression_user.copy()
         progression_quest[index] = '..'
-        progression_str = ", ".join(map(str, progression_quest))
+        progression_str = " ".join(map(str, progression_quest))
 
         print(f'Question: {progression_str}')
         answer = get_answer()
