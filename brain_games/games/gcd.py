@@ -1,4 +1,5 @@
-from brain_games.games.helper import generate_number, get_answer, get_check, get_gcd_result
+from brain_games.games.helper import generate_number, get_answer, \
+    get_check, get_gcd_result
 
 
 def gcd(name='User'):
@@ -16,5 +17,6 @@ def gcd(name='User'):
         if i == 3:
             print(f'Congratulations, {name}!')
         elif i == 4:
-            print(f'\'{answer}\' is wrong answer ;(. Correct answer was \'{result}\'')
+            print(f'\'{answer}\' is wrong answer ;(. '
+                  f'Correct answer was \'{result}\'')
             print(f'Let\'s try again, {name}!')

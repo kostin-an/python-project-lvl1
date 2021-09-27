@@ -1,4 +1,5 @@
-from brain_games.games.helper import generate_number, get_prime_result, get_answer, get_check
+from brain_games.games.helper import generate_number, get_prime_result, \
+    get_answer, get_check
 
 
 def prime(name="User"):
@@ -14,5 +15,6 @@ def prime(name="User"):
         if i == 3:
             print(f'Congratulations, {name}!')
         elif i == 4:
-            print(f'\'{answer}\' is wrong answer ;(. Correct answer was \'{result}\'')
+            print(f'\'{answer}\' is wrong answer ;(. '
+                  f'Correct answer was \'{result}\'')
             print(f'Let\'s try again, {name}!')
