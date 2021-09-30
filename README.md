@@ -6,7 +6,7 @@
 [![Github Actions Status](https://github.com/kostin-an/python-project-lvl1/workflows/Python%20CI/badge.svg)](https://github.com/kostin-an/python-project-lvl1/actions)
 
 brain-even
-<script id="asciicast-XLJFDhmNvqGQ35xYSHx5avcyD" src="https://asciinema.org/a/XLJFDhmNvqGQ35xYSHx5avcyD.js" async></script>
+[![asciicast](https://asciinema.org/a/XLJFDhmNvqGQ35xYSHx5avcyD.svg)](https://asciinema.org/a/XLJFDhmNvqGQ35xYSHx5avcyD)
 
 brain-calc
 https://asciinema.org/a/NlYePwTLKlOVhCAeE7Jrpq0Od
