@@ -1,23 +1,24 @@
-from brain_games.games.helper import generate_number, get_answer, \
-    generate_operation, get_calc_result, get_check
+import random
+from brain_games.engine import generate_number
 
 
-def calc(name='User'):
-    print('What is the result of the expression?')
+DESCRIPTION = 'What is the result of the expression?'
 
-    i = 0
-    while i < 3:
-        number_one = generate_number()
-        number_two = generate_number()
-        operation = generate_operation()
-        result = get_calc_result(number_one, number_two, operation)
 
-        print(f'Question: {number_one} {operation} {number_two}')
-        answer = get_answer()
-        i = get_check(i, answer, result)
-        if i == 3:
-            print(f'Congratulations, {name}!')
-        elif i == 4:
-            print(f'\'{answer}\' is wrong answer ;(. '
-                  f'Correct answer was \'{result}\'')
-            print(f'Let\'s try again, {name}!')
+def generate_operation():
+    operation_list = ['+', '-', '*']
+    return random.choice(operation_list)
+
+
+def get_round():
+    number_one = generate_number()
+    number_two = generate_number()
+    operation = generate_operation()
+    question = f'{number_one} {operation} {number_two}'
+    if operation == '+':
+        correct_answer = int(number_one) + int(number_two)
+    elif operation == '-':
+        correct_answer = int(number_one) - int(number_two)
+    else:
+        correct_answer = int(number_one) * int(number_two)
+    return question, str(correct_answer)

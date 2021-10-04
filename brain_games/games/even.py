@@ -1,20 +1,13 @@
-from brain_games.games.helper import get_answer, get_check, \
-    get_even_result, generate_number
+from brain_games.engine import generate_number
 
 
-def even_check(name="User"):
-    print('Answer "yes" if the number is even, otherwise answer "no".')
+DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".'
 
-    i = 0
-    while i < 3:
-        number = generate_number()
-        result = get_even_result(number)
-        print(f'Question: {number}')
-        answer = get_answer().lower()
-        i = get_check(i, answer, result)
-        if i == 3:
-            print(f'Congratulations, {name}!')
-        elif i == 4:
-            print(f'\'{answer}\' is wrong answer ;(. '
-                  f'Correct answer was \'{result}\'')
-            print(f'Let\'s try again, {name}!')
+
+def get_round():
+    number = generate_number()
+    if number % 2 == 0:
+        correct_answer = 'yes'
+    else:
+        correct_answer = 'no'
+    return str(number), str(correct_answer)
