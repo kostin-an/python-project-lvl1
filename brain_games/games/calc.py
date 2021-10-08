@@ -16,9 +16,9 @@ def get_round():
     operation = generate_operation()
     question = f'{number_one} {operation} {number_two}'
     if operation == '+':
-        correct_answer = int(number_one) + int(number_two)
+        correct_answer = number_one + number_two
     elif operation == '-':
-        correct_answer = int(number_one) - int(number_two)
+        correct_answer = number_one - number_two
     else:
-        correct_answer = int(number_one) * int(number_two)
+        correct_answer = number_one * number_two
     return question, str(correct_answer)

@@ -4,18 +4,17 @@ from brain_games.engine import generate_number
 DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
-def get_prime_result(number):
+def is_prime(number):
     if number < 2:
-        return 'no'
-    list_number = list(range(1, number))
-    for i in list_number:
-        if (i > 1) and (number % i == 0):
-            return 'no'
-    return 'yes'
+        return False
+    for i in range(2, number):
+        if number % i == 0:
+            return False
+    return True
 
 
 def get_round():
     number = generate_number()
     question = str(number)
-    correct_answer = get_prime_result(number)
+    correct_answer = 'yes' if is_prime(number) else 'no'
     return question, correct_answer

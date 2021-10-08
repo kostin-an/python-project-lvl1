@@ -3,25 +3,18 @@ import random
 
 
 ROUND_COUNT = 3
-
-
-def welcome():
-    print('Welcome to the Brain Games!')
-
-
-def get_user_name():
-    user_name = prompt.string('May I have your name? ')
-    print(f'Hello, {user_name}!')
-    return user_name
+NUMBER_START = 1
+NUMBER_STOP = 100
 
 
 def generate_number():
-    return random.randint(1, 100)
+    return random.randint(NUMBER_START, NUMBER_STOP)
 
 
-def engine_game(game):
-    welcome()
-    user_name = get_user_name()
+def run_engine_game(game):
+    print('Welcome to the Brain Games!')
+    user_name = prompt.string('May I have your name? ')
+    print(f'Hello, {user_name}!')
     print(game.DESCRIPTION)
     for i in range(ROUND_COUNT):
         question, correct_answer = game.get_round()
